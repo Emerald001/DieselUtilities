@@ -1,0 +1,23 @@
+{
+  "name": "com.diesel.utilities.extended",
+  "version": "0.0.1",
+  "displayName": "Diesel Utilities Extended",
+  "discription": "An extended collection of code made for Diesel feuled projects",
+  "unity": "2021.3",
+  "dependencies": {
+    "com.diesel.utilities": "0.0.1",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "keywords": [
+    "utility",
+    "tools"
+  ],
+  "author": "Diesel",
+  "samples": [
+    {
+      "displayName": "DebugScreenExample",
+      "discription": "This example shows how to use the Debug Screen.",
+      "path": "Samples/DebugScreen"
+    }
+  ]
+}
