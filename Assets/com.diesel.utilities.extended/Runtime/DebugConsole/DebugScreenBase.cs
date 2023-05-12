@@ -20,7 +20,6 @@ public class DebugScreenBase<T> : MonoBehaviour
     /// <summary>
     /// Must be called in Awake by Inheritor.
     /// </summary>
-    /// <param name="objectToUse"></param>
     public void Init(T objectToUse) {
         varHolder = objectToUse;
 

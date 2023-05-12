@@ -57,5 +57,11 @@ public class ActionQueue
             NextAction();
     }
 
-    public void Clear() => CurrentQueue.Clear();
+    public void Clear(bool finishAction = false) {
+        if (!finishAction)
+            CurrentAction = null;
+
+        CurrentQueue.Clear();
+        OnEmptyQueue?.Invoke();
+    }
 }
