@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 
-public class ActionManager
+public class ActionQueue
 {
     private Action CurrentAction;
     private Queue<Action> CurrentQueue = new();
+
     private readonly System.Action OnEmptyQueue;
     
-    public ActionManager(System.Action OnEmptyQueue = null) {
+    public ActionQueue(System.Action OnEmptyQueue = null) {
         this.OnEmptyQueue = OnEmptyQueue;
     }
 
@@ -35,7 +36,7 @@ public class ActionManager
         }
         else {
             CurrentAction = null;
-            OnEmptyQueue.Invoke();
+            OnEmptyQueue?.Invoke();
         }
     }
 
