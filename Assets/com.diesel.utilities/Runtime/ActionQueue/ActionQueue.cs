@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 public class ActionQueue
 {
+    public bool HasActions { get => CurrentQueue.Count > 0; }
+
     private Action CurrentAction;
     private Queue<Action> CurrentQueue = new();
 
@@ -40,7 +42,7 @@ public class ActionQueue
         }
     }
 
-    public void Inject(int index, Action action) {
+    public void Inject(Action action, int index = 0) {
         List<Action> tmp = new(CurrentQueue);
 
         tmp.Insert(index, action);
@@ -48,6 +50,12 @@ public class ActionQueue
         CurrentQueue = new(tmp);
     }
 
-    public void Enqueue(Action action) => CurrentQueue.Enqueue(action);
+    public void Enqueue(Action action) {
+        CurrentQueue.Enqueue(action);
+
+        if (CurrentAction == null)
+            NextAction();
+    }
+
     public void Clear() => CurrentQueue.Clear();
 }
