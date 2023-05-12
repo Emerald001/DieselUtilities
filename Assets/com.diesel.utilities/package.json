@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "displayName": "Diesel Utilities",
   "discription": "A collection of code made for Diesel's standing stuff",
-  "unity": "2021.3.11f1",
+  "unity": "2021.3",
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6"
   },
