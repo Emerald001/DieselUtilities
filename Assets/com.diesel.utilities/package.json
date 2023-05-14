@@ -1,18 +1,42 @@
 {
   "name": "com.diesel.utilities",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "displayName": "Diesel Utilities",
-  "discription": "A collection of code made for Diesel's standing stuff",
+  "discription": "A collection of code made for Diesel's stuff",
   "unity": "2021.3",
   "dependencies": {
-    "com.unity.textmeshpro": "3.0.6"
+
   },
   "keywords": [
     "utility",
     "tools"
   ],
   "author": "Diesel",
-  "samples": {
-
-  }
+  "samples": [
+    {
+      "displayName": "ActionQueueExample",
+      "discription": "This example shows how to implement the action queue",
+      "path": "Samples/ActionQueue"
+    },
+    {
+      "displayName": "EventManagerExample",
+      "discription": "This example shows how to implement the event manager",
+      "path": "Samples/EventManager"
+    },
+    {
+      "displayName": "ObjectPoolExample",
+      "discription": "This example shows how to implement the object pool",
+      "path": "Samples/ObjectPool"
+    },
+    {
+      "displayName": "SingletonBaseExample",
+      "discription": "This example shows how to implement the singleton base",
+      "path": "Samples/SingletonBase"
+    },
+    {
+      "displayName": "StateMachineExample",
+      "discription": "This example shows how to implement the state machine",
+      "path": "Samples/StateMachine"
+    }
+  ]
 }
