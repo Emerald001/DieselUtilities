@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TransitionMethods : MonoBehaviour
@@ -17,8 +15,10 @@ public class TransitionMethods : MonoBehaviour
 
         //transition with key, press key in that state and it transitions to the assigned one
         AddTransitionWithKey(exampleState, KeyCode.Space, typeof(ExampleState));
+
         //If the bool, a reference to one, changes while in that state and it transitions to the assigned one, cannot do a method, it will just use the output from when it was assigned, not in realtime
         AddTransitionWithBool(exampleState, true, typeof(ExampleState));
+
         //If the prediquete is true while in that state and it transitions to the assigned one
         AddTransitionWithPrediquete(exampleState, (x) => { return Input.GetKeyDown(KeyCode.Space); }, typeof(ExampleState));
     }
