@@ -1,19 +1,26 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    private readonly List<Sound> soundslist = new();
+    [SerializeField] private List<Sound> soundslist = new();
 
-    public void Init() {
+    private void Awake() {
         foreach (Sound s in soundslist) {
-            s.Source = gameObject.AddComponent<AudioSource>();
+            if (s.sourceObject != null)
+                s.Source = s.sourceObject.AddComponent<AudioSource>();
+            else
+                s.Source = gameObject.AddComponent<AudioSource>();
+
             s.Source.clip = s.clip;
 
             s.Source.volume = s.volume;
             s.Source.pitch = s.pitch;
             s.Source.loop = s.loop;
+            s.Source.maxDistance = s.range;
 
+            s.Source.outputAudioMixerGroup = s.mixerGroup;
             s.Source.spatialBlend = s.spacialBlend;
         }
     }
@@ -35,6 +42,9 @@ public class Sound {
     [Header("Audio")]
     public string name;
     public AudioClip clip;
+    public AudioMixerGroup mixerGroup;
+    [Tooltip("Can be Null if it should be on the player.")]
+    public GameObject sourceObject = null;
 
     [Header("Audio Settings")]
     [Range(0, 1f)]
@@ -43,5 +53,8 @@ public class Sound {
     public float pitch;
     [Range(0, 1f)]
     public float spacialBlend;
+    [Tooltip("Only applicable if the Spatial blend is above 0.5.")]
+    [Range(0, 500)]
+    public float range;
     public bool loop;
 }
