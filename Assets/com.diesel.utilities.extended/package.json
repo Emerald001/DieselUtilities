@@ -1,11 +1,11 @@
 {
   "name": "com.diesel.utilities.extended",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "displayName": "Diesel Utilities Extended",
   "discription": "An extended collection of code made for Diesel feuled projects",
   "unity": "2021.3",
   "dependencies": {
-    "com.diesel.utilities": "0.0.1",
+    "com.diesel.utilities": "1.1.0",
     "com.unity.textmeshpro": "3.0.6"
   },
   "keywords": [
@@ -14,6 +14,11 @@
   ],
   "author": "Diesel",
   "samples": [
+    {
+      "displayName": "AudioManagerExample",
+      "discription": "This example shows how to use the Audio Manager.",
+      "path": "Samples/AudioManager"
+    },
     {
       "displayName": "DebugScreenExample",
       "discription": "This example shows how to use the Debug Screen.",
