@@ -1,17 +1,23 @@
 using System;
 using System.Collections.Generic;
 
-public interface Ipoolable { 
+public interface IPoolable { 
     bool Active { get; set; }
     void Init();
     void OnEnableObject();
     void OnDisableObject();
 }
 
-public class ObjectPool<T> where T : Ipoolable
+public class ObjectPool<T> where T : IPoolable
 {
     private readonly List<T> activePool = new();
     private readonly List<T> inactivePool = new();
+
+    public ObjectPool(int startAmount = 0) {
+        for (int i = 0; i < startAmount; i++) {
+            AddNewItemToPool();
+        }
+    }
 
     private T AddNewItemToPool() {
         T instance = (T)Activator.CreateInstance(typeof(T));
