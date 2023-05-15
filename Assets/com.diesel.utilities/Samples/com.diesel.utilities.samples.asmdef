@@ -1,0 +1,16 @@
+{
+    "name": "com.diesel.utilities.samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:702733ec9d7c5864281d1d54c6b6d377"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

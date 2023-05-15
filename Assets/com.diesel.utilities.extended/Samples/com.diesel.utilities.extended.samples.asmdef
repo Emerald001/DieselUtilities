@@ -1,0 +1,16 @@
+{
+    "name": "com.diesel.utilities.extended.samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:43e64c4a68f40a5498246518356d2b7f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
