@@ -21,7 +21,7 @@ public static class EventManager<Enum> {
     }
 }
 
-public static class EventManagerBase<Enum, T> {
+public static class EventManager<Enum, T> {
     private static readonly Dictionary<Enum, System.Action<T>> eventActions = new();
 
     public static void Subscribe(Enum eventType, System.Action<T> eventToSubscribe) {
