@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMachine<T>
-{
+public class StateMachine<T> {
     public T Owner { get; protected set; }
     public State<T> CurrentState { get; protected set; }
 
@@ -17,7 +16,7 @@ public class StateMachine<T>
     }
 
     public void ChangeState(System.Type state) {
-        if(CurrentState == StateDic[state]) {
+        if (CurrentState == StateDic[state]) {
             Debug.LogError("Can't go into state it's already in");
             return;
         }

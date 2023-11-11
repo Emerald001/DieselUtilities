@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class TransitionMethods : MonoBehaviour
-{
+public class TransitionMethods : MonoBehaviour {
     private StateMachine<TransitionMethods> StateMachine;
 
     public void Awake() {
@@ -26,9 +25,8 @@ public class TransitionMethods : MonoBehaviour
     public void AddTransitionWithKey(State<TransitionMethods> state, KeyCode keyCode, System.Type stateTo) {
         state.AddTransition(new Transition<TransitionMethods>(
             (x) => {
-                if (Input.GetKeyDown(keyCode)) {
+                if (Input.GetKeyDown(keyCode))
                     return true;
-                }
                 return false;
             }, stateTo));
     }
